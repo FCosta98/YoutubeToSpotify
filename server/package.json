@@ -9,7 +9,7 @@
   "scripts": {
     "devStart": "nodemon server.js",
     "start": "node server.js",
-    "heroku-postbuild": "cd ./client && npm install && npm run build"
+    "heroku-postbuild": "cd /Users/costa/Documents/Projets_Perso/Informatique/YoutubeToSpotify2/client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
