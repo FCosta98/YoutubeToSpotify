@@ -17,13 +17,20 @@ export default function App() {
     const [expireIn, setExpireIn] = useState(localStorage.getItem('expireIn2'));
     const [isAuth, setIsAuth] = useState(false)
 
+    //ADDED
+    const loc = window.location;
+    axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
+
     const isAccessTokenExpired = expireIn
         ? new Date().getTime() > parseInt(expireIn) * 1000
         : true;
 
     const refreshAccessToken = async () => {
+        if(!refreshToken){
+            return;
+        }
         try {
-            const response = await axios.post('http://localhost:3001/refresh', {
+            const response = await axios.post('/refresh', {
                 refreshToken,
             });
 

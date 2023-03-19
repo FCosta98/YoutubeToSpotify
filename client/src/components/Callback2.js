@@ -7,7 +7,7 @@ export default function Callback2() {
         const handleCallback = async () => {
             const code  = new URLSearchParams(window.location.search).get('code');
             console.log(code)
-            axios.post("http://localhost:3001/login", {
+            axios.post("/login", {
                 code,
             })
             .then(res => {

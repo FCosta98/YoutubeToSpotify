@@ -94,7 +94,7 @@ export default function Dashboard2({spotifyApi}) {
     };
 
     async function getYoutubePlaylistItems(playlistId, pageToken) {
-        const response = await axios.get("http://localhost:3001/playlist", { params: { playlistId, pageToken } });
+        const response = await axios.get("/playlist", { params: { playlistId, pageToken } });
         const items = response.data.items;
         if (response.data.nextPageToken) {
             const nextItems = await getYoutubePlaylistItems(playlistId, response.data.nextPageToken);
