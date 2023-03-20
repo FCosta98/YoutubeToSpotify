@@ -31,7 +31,8 @@ export default function Callback2() {
                 localStorage.setItem('expireIn2', res.data.expiresIn);
                 window.location.href = '/';
             })
-            .catch(() => {
+            .catch((err) => {
+                console.log(err);
                 window.location.href = '/';
             })
         };
