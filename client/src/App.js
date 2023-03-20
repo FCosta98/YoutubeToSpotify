@@ -8,8 +8,8 @@ import Dashboard2 from './components/Dashboard2';
 
 const spotifyApi = new SpotifyWebApi({
   clientId: '9e6a9593ba0c40e8be113a49ac48f487',
-  redirectUri: 'https://main--lucky-biscuit-d37265.netlify.app/callback'
-  //redirectUri: 'http://localhost:3000/callback'
+  redirectUri: 'https://main--ytb-to-spotify.netlify.app/callback'
+  //redirectUri: 'http://localhost:3000/callback' //CHANGE EN DEV
 });
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
 
     //ADDED check if dev
     const loc = window.location;
-    console.log("TEST LOC:", loc.hostname);
+    //console.log("TEST LOC:", loc.hostname);
     if(loc.hostname === 'localhost'){
         axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
     }
