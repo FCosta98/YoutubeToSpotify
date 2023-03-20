@@ -18,7 +18,7 @@ export default function Login2() {
         handleLogin = () => {
             //client URL
             console.log("CLIENT GOGOGO");
-            const authorizeUrl = "https://accounts.spotify.com/authorize?client_id=9e6a9593ba0c40e8be113a49ac48f487&response_type=code&redirect_uri=https://main--lucky-biscuit-d37265.netlify.app/callback&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20playlist-modify-private%20playlist-modify-public";
+            const authorizeUrl = "https://accounts.spotify.com/authorize?client_id=9e6a9593ba0c40e8be113a49ac48f487&response_type=code&redirect_uri=https://6418aa848019ce0008c56ba4--lucky-biscuit-d37265.netlify.app/callback&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20playlist-modify-private%20playlist-modify-public";
             window.location.href = authorizeUrl;
             console.log("CLIENT GOGOGO 2");
         };
