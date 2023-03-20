@@ -17,7 +17,7 @@ export default function App() {
     const [expireIn, setExpireIn] = useState(localStorage.getItem('expireIn2'));
     const [isAuth, setIsAuth] = useState(false)
 
-    //ADDED
+    //ADDED check if dev
     const loc = window.location;
     axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
 

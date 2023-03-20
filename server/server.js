@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
-const path = require('path');//ADDED
+//const path = require('path');//ADDED
 const bodyParser = require('body-parser');
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -11,12 +11,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //ADDED
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '../client/build')));
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname + '/client/build/index.html'))
-    })
-}
+// if(process.env.NODE_ENV === 'production'){
+//     app.use(express.static(path.join(__dirname, '../client/build')));
+//     app.get('*', (req, res) => {
+//         res.sendFile(path.join(__dirname + '/client/build/index.html'))
+//     })
+// }
 
 /** YOUTUBE SECTION */
 
