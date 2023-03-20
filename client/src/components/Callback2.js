@@ -14,6 +14,7 @@ export default function Callback2() {
     }
 
     useEffect(() => {
+        console.log("START CALLBACK");
         const handleCallback = async () => {
             const code  = new URLSearchParams(window.location.search).get('code');
             console.log(code)
