@@ -19,6 +19,7 @@ export default function App() {
 
     //ADDED check if dev
     const loc = window.location;
+    console.log("TEST LOC:", loc.hostname);
     if(loc.hostname === 'localhost'){
         axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
     }
