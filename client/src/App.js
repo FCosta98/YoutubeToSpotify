@@ -8,7 +8,8 @@ import Dashboard2 from './components/Dashboard2';
 
 const spotifyApi = new SpotifyWebApi({
   clientId: '9e6a9593ba0c40e8be113a49ac48f487',
-  redirectUri: 'http://localhost:3000/callback'
+  redirectUri: 'https://main--lucky-biscuit-d37265.netlify.app/callback'
+  //redirectUri: 'http://localhost:3000/callback'
 });
 
 export default function App() {
