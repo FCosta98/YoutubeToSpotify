@@ -13,12 +13,11 @@ export default function Dashboard2({spotifyApi}) {
 
     //ADDED check if dev
     const loc = window.location;
-    console.log("TEST LOC:", loc.hostname);
     if(loc.hostname === 'localhost'){
         axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
     }
     else{
-        axios.defaults.baseURL = `https://yuotube-to-spotify.onrender.com`;
+        axios.defaults.baseURL = 'https://yuotube-to-spotify.onrender.com';
     }
 
     const isFormCompleted = playlistName && playlistId;

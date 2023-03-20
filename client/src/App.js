@@ -24,7 +24,7 @@ export default function App() {
         axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
     }
     else{
-        axios.defaults.baseURL = `https://yuotube-to-spotify.onrender.com`;
+        axios.defaults.baseURL = 'https://yuotube-to-spotify.onrender.com';
     }
     
 
