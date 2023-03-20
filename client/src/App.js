@@ -19,7 +19,13 @@ export default function App() {
 
     //ADDED check if dev
     const loc = window.location;
-    axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
+    if(loc.hostname === 'localhost'){
+        axios.defaults.baseURL = `${loc.protocol}//${loc.hostname}${loc.hostname === 'localhost' ? ':3001' : ''}`;
+    }
+    else{
+        axios.defaults.baseURL = `https://yuotube-to-spotify.onrender.com`;
+    }
+    
 
     const isAccessTokenExpired = expireIn
         ? new Date().getTime() > parseInt(expireIn) * 1000
